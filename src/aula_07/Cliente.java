@@ -6,16 +6,16 @@ package aula_07;
 public class Cliente implements Autenticavel {
 
     //private int senha;
-    private AutenticacaoUtil util;
+    private AutenticacaoUtil autenticador;
 
     public Cliente(){
-        this.util = new AutenticacaoUtil();
+        this.autenticador = new AutenticacaoUtil();
     }
 
     @Override
     public void setSenha(int senha) {
 //        this.senha = senha;
-        this.util.setSenha(senha);
+        this.autenticador.setSenha(senha);
     }
 
     @Override
@@ -25,6 +25,6 @@ public class Cliente implements Autenticavel {
 //        } else{
 //            return false;
 //        }
-        return this.util.autentica(senha);
+        return this.autenticador.autentica(senha);
     }
 }
